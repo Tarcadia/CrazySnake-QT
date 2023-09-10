@@ -2,8 +2,6 @@ cmake_minimum_required(VERSION 3.5)
 
 project(QTSnake VERSION 0.1 LANGUAGES CXX)
 
-INCLUDE_DIRECTORIES(/home/tarcadia/Projects/QTSnake)
-
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
