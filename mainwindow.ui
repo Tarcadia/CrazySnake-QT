@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>480</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>480</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>480</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="palette">
+   <palette>
+    <active>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>187</red>
+        <green>224</green>
+        <blue>227</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </active>
+    <inactive>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>187</red>
+        <green>224</green>
+        <blue>227</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </inactive>
+    <disabled>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>187</red>
+        <green>224</green>
+        <blue>227</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>187</red>
+        <green>224</green>
+        <blue>227</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </disabled>
+   </palette>
+  </property>
+  <property name="windowTitle">
+   <string>CrazySnake</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="widgetScene">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>480</width>
+      <height>480</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="SceneMenu" name="sceneMenu"/>
+    <widget class="SceneHelp" name="sceneHelp"/>
+    <widget class="SceneGame" name="sceneGame"/>
+    <widget class="SceneEndGame" name="sceneEndGame"/>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>SceneMenu</class>
+   <extends>QWidget</extends>
+   <header>scene/scenemenu/scenemenu.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SceneHelp</class>
+   <extends>QWidget</extends>
+   <header>scene/scenehelp/scenehelp.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SceneGame</class>
+   <extends>QWidget</extends>
+   <header>scene/scenegame/scenegame.h</header>
+   <container>1</container>
+   <slots>
+    <signal>cmdStop()</signal>
+    <signal>cmdExit()</signal>
+    <signal>scored(int)</signal>
+    <slot>setupGame()</slot>
+    <slot>updateGame()</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>SceneEndGame</class>
+   <extends>QWidget</extends>
+   <header>scene/sceneendgame/sceneendgame.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

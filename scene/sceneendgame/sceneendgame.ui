@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SceneEndGame</class>
+ <widget class="QWidget" name="SceneEndGame">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>480</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="windowOpacity">
+   <double>0.000000000000000</double>
+  </property>
+  <widget class="QClickImage" name="labelOverlay">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>481</width>
+     <height>481</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>481</width>
+     <height>481</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="layoutLabel">
+    <item>
+     <widget class="QWidget" name="wdgFillUp" native="true"/>
+    </item>
+    <item>
+     <widget class="QLabel" name="labelGameOver">
+      <property name="font">
+       <font>
+        <pointsize>48</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700; color:#ffffff;&quot;&gt;Game Over&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::RichText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="labelScore">
+      <property name="font">
+       <font>
+        <pointsize>36</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700; color:#ffffff;&quot;&gt;Score: 0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::RichText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="wdgFillDown" native="true"/>
+    </item>
+   </layout>
+  </widget>
+  <zorder>verticalLayoutWidget</zorder>
+  <zorder>labelOverlay</zorder>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QClickImage</class>
+   <extends>QLabel</extends>
+   <header location="global">components/qclickimage.h</header>
+   <slots>
+    <signal>clicked()</signal>
+    <signal>mouseOn()</signal>
+    <signal>mouseOff()</signal>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>labelOverlay</sender>
+   <signal>clicked()</signal>
+   <receiver>SceneEndGame</receiver>
+   <slot>callCmdStop()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>240</x>
+     <y>240</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <signal>cmdStop()</signal>
+  <slot>showScore()</slot>
+  <slot>recordScore(int)</slot>
+  <slot>endScore(int)</slot>
+  <slot>opacityChangeStep()</slot>
+  <slot>callCmdStop()</slot>
+ </slots>
+</ui>

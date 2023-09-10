@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SceneMenu</class>
+ <widget class="QWidget" name="SceneMenu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>480</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Menu</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <widget class="QSliderLabel" name="labelShow">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>480</width>
+     <height>480</height>
+    </rect>
+   </property>
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="../../resources.qrc">:/res/show.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QSliderLabel" name="labelTalk">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>480</width>
+     <height>480</height>
+    </rect>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="../../resources.qrc">:/res/talk.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>-1</x>
+     <y>-1</y>
+     <width>481</width>
+     <height>481</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="layoutMain">
+    <item>
+     <widget class="QWidget" name="wdgTitle" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>200</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="wdgLabelGame" native="true">
+      <widget class="QClickImage" name="labelGameMouseOn">
+       <property name="geometry">
+        <rect>
+         <x>43</x>
+         <y>10</y>
+         <width>393</width>
+         <height>64</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="../../resources.qrc">:/res/cmdGameMouseOn.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QClickImage" name="labelGameMouseOff">
+       <property name="geometry">
+        <rect>
+         <x>43</x>
+         <y>10</y>
+         <width>393</width>
+         <height>64</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="../../resources.qrc">:/res/cmdGameMouseOff.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="wdgLabelHelp" native="true">
+      <widget class="QClickImage" name="labelHelpMouseOn">
+       <property name="geometry">
+        <rect>
+         <x>43</x>
+         <y>10</y>
+         <width>393</width>
+         <height>64</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="../../resources.qrc">:/res/cmdHelpMouseOn.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QClickImage" name="labelHelpMouseOff">
+       <property name="geometry">
+        <rect>
+         <x>43</x>
+         <y>10</y>
+         <width>393</width>
+         <height>64</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="../../resources.qrc">:/res/cmdHelpMouseOff.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="wdgLabelExit" native="true">
+      <widget class="QClickImage" name="labelExitMouseOn">
+       <property name="geometry">
+        <rect>
+         <x>43</x>
+         <y>10</y>
+         <width>393</width>
+         <height>64</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="../../resources.qrc">:/res/cmdExitMouseOn.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QClickImage" name="labelExitMouseOff">
+       <property name="geometry">
+        <rect>
+         <x>43</x>
+         <y>10</y>
+         <width>393</width>
+         <height>64</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="../../resources.qrc">:/res/cmdExitMouseOff.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="labelBack">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>480</width>
+     <height>480</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="../../resources.qrc">:/res/back.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>labelBack</zorder>
+  <zorder>verticalLayoutWidget</zorder>
+  <zorder>labelTalk</zorder>
+  <zorder>labelShow</zorder>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QSliderLabel</class>
+   <extends>QLabel</extends>
+   <header location="global">components/qsliderlabel.h</header>
+   <slots>
+    <signal>clicked()</signal>
+    <slot>slideUp()</slot>
+    <slot>slideDown()</slot>
+    <slot>slideLeft()</slot>
+    <slot>slideRight()</slot>
+    <slot>slideStep()</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>QClickImage</class>
+   <extends>QLabel</extends>
+   <header location="global">components/qclickimage.h</header>
+   <slots>
+    <signal>clicked()</signal>
+    <signal>mouseOn()</signal>
+    <signal>mouseOff()</signal>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../../resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>labelExitMouseOn</sender>
+   <signal>mouseOff()</signal>
+   <receiver>labelExitMouseOn</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>405</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>405</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>labelExitMouseOff</sender>
+   <signal>mouseOn()</signal>
+   <receiver>labelExitMouseOn</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>405</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>405</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>labelExitMouseOn</sender>
+   <signal>mouseOff()</signal>
+   <receiver>labelExitMouseOff</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>405</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>405</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>labelExitMouseOff</sender>
+   <signal>mouseOn()</signal>
+   <receiver>labelExitMouseOff</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>405</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>405</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>labelGameMouseOff</sender>
+   <signal>mouseOn()</signal>
+   <receiver>labelGameMouseOn</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>247</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>247</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>labelGameMouseOff</sender>
+   <signal>mouseOn()</signal>
+   <receiver>labelGameMouseOff</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>247</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>247</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>labelGameMouseOn</sender>
+   <signal>mouseOff()</signal>
+   <receiver>labelGameMouseOn</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>247</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>247</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>labelGameMouseOn</sender>
+   <signal>mouseOff()</signal>
+   <receiver>labelGameMouseOff</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>247</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>247</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>labelHelpMouseOn</sender>
+   <signal>mouseOff()</signal>
+   <receiver>labelHelpMouseOn</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>340</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>340</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>labelHelpMouseOn</sender>
+   <signal>mouseOff()</signal>
+   <receiver>labelHelpMouseOff</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>340</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>340</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>labelHelpMouseOff</sender>
+   <signal>mouseOn()</signal>
+   <receiver>labelHelpMouseOn</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>340</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>340</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>labelHelpMouseOff</sender>
+   <signal>mouseOn()</signal>
+   <receiver>labelHelpMouseOff</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>340</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>340</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>labelShow</sender>
+   <signal>clicked()</signal>
+   <receiver>labelShow</receiver>
+   <slot>slideUp()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>239</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>labelTalk</sender>
+   <signal>clicked()</signal>
+   <receiver>labelTalk</receiver>
+   <slot>slideUp()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>239</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>labelExitMouseOn</sender>
+   <signal>clicked()</signal>
+   <receiver>SceneMenu</receiver>
+   <slot>callCmdExit()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>433</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>labelHelpMouseOn</sender>
+   <signal>clicked()</signal>
+   <receiver>SceneMenu</receiver>
+   <slot>callCmdHelp()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>340</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>labelGameMouseOn</sender>
+   <signal>clicked()</signal>
+   <receiver>SceneMenu</receiver>
+   <slot>callCmdGame()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>247</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <signal>cmdGame()</signal>
+  <signal>cmdHelp()</signal>
+  <signal>cmdExit()</signal>
+  <slot>callCmdGame()</slot>
+  <slot>callCmdHelp()</slot>
+  <slot>callCmdExit()</slot>
+ </slots>
+</ui>

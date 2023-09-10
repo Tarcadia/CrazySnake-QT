@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/body.png</file>
+        <file>res/coin.png</file>
+        <file>res/head.png</file>
+        <file>res/show.png</file>
+        <file>res/talk.png</file>
+        <file>res/cmdExitMouseOff.png</file>
+        <file>res/cmdExitMouseOn.png</file>
+        <file>res/cmdGameMouseOff.png</file>
+        <file>res/cmdGameMouseOn.png</file>
+        <file>res/cmdHelpMouseOff.png</file>
+        <file>res/cmdHelpMouseOn.png</file>
+        <file>res/back.png</file>
+        <file>res/help.png</file>
+        <file>res/cmdEndMouseOff.png</file>
+        <file>res/cmdEndMouseOn.png</file>
+        <file>res/plainback.png</file>
+    </qresource>
+</RCC>
