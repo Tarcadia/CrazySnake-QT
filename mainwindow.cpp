@@ -29,6 +29,7 @@ MainWindow::MainWindow(QWidget *parent)
     QObject::connect(this->ui->sceneMenu, SIGNAL(cmdGame()), this->ui->sceneGame, SLOT(setupGame()));
     QObject::connect(this->ui->sceneGame, SIGNAL(scored(int)), this->ui->sceneEndGame, SLOT(recordScore(int)));
     QObject::connect(this->ui->sceneGame, SIGNAL(ended(int)), this->ui->sceneEndGame, SLOT(endScore(int)));
+    QObject::connect(this, SIGNAL(keyGame(Game::Direct)), this->ui->sceneGame, SLOT(updateGameKeyDir(Game::Direct)));
 
     this->setSceneMenu();
 }
