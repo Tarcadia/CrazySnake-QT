@@ -2,6 +2,8 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 
+#include <QKeyEvent>
+
 #include "scene/scenemenu/scenemenu.h"
 #include "scene/scenehelp/scenehelp.h"
 
@@ -58,4 +60,32 @@ void MainWindow::setSceneEndGame()
 {
     //Magic Number controlled by QStackedWidget widgetScene indexes;
     this->ui->widgetScene->setCurrentIndex(3);
+}
+
+void MainWindow::keyPressEvent(QKeyEvent *event)
+{
+    if (this->ui->widgetScene->currentIndex() == 2)
+    {
+        Game::Direct opDir = Game::Direct::NDIR;
+        switch (event->key())
+        {
+        case Qt::Key_Up:
+            opDir = Game::Direct::UP;
+            break;
+        case Qt::Key_Down:
+            opDir = Game::Direct::DOWN;
+            break;
+        case Qt::Key_Left:
+            opDir = Game::Direct::LEFT;
+            break;
+        case Qt::Key_Right:
+            opDir = Game::Direct::RIGHT;
+            break;
+        
+        default:
+            break;
+        }
+
+        emit keyGame(opDir);
+    }
 }

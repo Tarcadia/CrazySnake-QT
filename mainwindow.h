@@ -18,6 +18,9 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+signals:
+    void keyGame(Game::Direct dir);
+
 private slots:
     void setSceneMenu();
     void setSceneHelp();
@@ -26,5 +29,10 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+
+    // QWidget interface
+protected:
+    virtual void keyPressEvent(QKeyEvent *event) override;
+
 };
 #endif // MAINWINDOW_H
