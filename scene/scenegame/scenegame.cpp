@@ -1,8 +1,6 @@
 #include "scenegame.h"
 #include "ui_scenegame.h"
 
-#include <QKeyEvent>
-
 SceneGame::SceneGame(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::SceneGame)
@@ -18,9 +16,6 @@ SceneGame::SceneGame(QWidget *parent) :
     this->pixmapHead->load(":/res/head.png");
     this->pixmapBody->load(":/res/body.png");
     this->pixmapCoin->load(":/res/coin.png");
-
-    this->setFocusPolicy(Qt::StrongFocus);
-    this->setFocus();
 
     for (int i = 0; i < sizeGridWidth; i++)
         for (int j = 0; j < sizeGridHeight; j++)
@@ -102,6 +97,13 @@ void SceneGame::updateGame()
     else return;
 }
 
+void SceneGame::updateGameKeyDir(Game::Direct dir)
+{
+    if (this->game != nullptr) {
+        this->game->setOpDirect(dir);
+    }
+}
+
 void SceneGame::onScore(int score)
 {
     this->ui->labelScore->setText(QString("Score: ") + QString::number(score));
@@ -115,31 +117,4 @@ void SceneGame::onEnded(int score)
     if (this->game != nullptr) delete this->game;
     this->game = nullptr;
     emit ended(score);
-}
-
-void SceneGame::keyPressEvent(QKeyEvent *event)
-{
-    Game::Direct opDir = Game::Direct::NDIR;
-    switch (event->key())
-    {
-    case Qt::Key_Up:
-        opDir = Game::Direct::UP;
-        break;
-    case Qt::Key_Down:
-        opDir = Game::Direct::DOWN;
-        break;
-    case Qt::Key_Left:
-        opDir = Game::Direct::LEFT;
-        break;
-    case Qt::Key_Right:
-        opDir = Game::Direct::RIGHT;
-        break;
-    
-    default:
-        break;
-    }
-
-    if (this->game != nullptr) {
-        this->game->setOpDirect(opDir);
-    }
 }

@@ -33,6 +33,7 @@ signals:
 public slots:
     void setupGame();
     void updateGame();
+    void updateGameKeyDir(Game::Direct dir);
 
 private slots:
     void callCmdStop();
@@ -53,9 +54,6 @@ private:
     QPixmap *pixmapBody = static_cast<QPixmap*>(nullptr);
     QPixmap *pixmapCoin = static_cast<QPixmap*>(nullptr);
 
-    // QWidget interface
-protected:
-    virtual void keyPressEvent(QKeyEvent *event) override;
 };
 
 #endif // SCENEGAME_H
